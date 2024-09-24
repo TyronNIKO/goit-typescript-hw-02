@@ -1,7 +1,9 @@
+import React from "react";
+import { Props } from "../../types";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
-const ImageGallery = ({images, openModal}) => {
+const ImageGallery = ({images, openModal}: Props) => {
     return (
         <ul className={css.gallery}>
             {images.map(image => {

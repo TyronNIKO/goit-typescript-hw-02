@@ -1,7 +1,9 @@
+import React from "react";
+import { Props } from "../../types";
 import css from "./ImageCard.module.css";
 import {FaHeart} from "react-icons/fa";
 
-const ImageCard = ({img, openModal}) => {
+const ImageCard = ({img, openModal}:Props) => {
     return (
         <div className={css.imagecard} onClick={() => openModal(img.urls.regular, img.alt_description)}>
             <img src={img.urls.small} alt={img.alt_description} />
