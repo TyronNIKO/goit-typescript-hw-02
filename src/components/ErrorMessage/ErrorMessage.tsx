@@ -1,7 +1,9 @@
-import toast from "react-hot-toast";
-import css from "./ErrorMessage.module.css";
 
-const ErrorMessage = ({children}) => {
+import css from "./ErrorMessage.module.css";
+import { Props } from "../../types";
+import React from "react";
+
+const ErrorMessage = ({children}:Props) => {
     return <div className={css.errormessage}>{children}</div>;
 };
 

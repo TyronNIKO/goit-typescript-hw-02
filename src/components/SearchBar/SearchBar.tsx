@@ -1,6 +1,10 @@
+import React from "react";
+import { Props } from "../../types";
 import css from "./SearchBar.module.css";
 import {FaMagnifyingGlass} from "react-icons/fa6";
-const SearchBar = ({onSubmit}) => {
+
+
+const SearchBar = ({onSubmit}: Props) => {
     return (
         <header className={css["search-bar"]}>
             <form onSubmit={onSubmit}>
