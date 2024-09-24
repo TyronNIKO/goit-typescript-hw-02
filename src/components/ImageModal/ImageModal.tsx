@@ -1,5 +1,7 @@
 import Modal from "react-modal";
 import css from "./ImageModal.module.css";
+import { ImageModalProps } from "../../types";
+import React from "react";
 
 Modal.setAppElement("#root");
 const style = {
@@ -8,7 +10,7 @@ const style = {
     beforeClose: css["ReactModal__Overlay--before-close"],
 };
 
-const ImageModal = ({modalIsOpen, closeModal, src, alt}) => {
+const ImageModal: React.FC<ImageModalProps> = ({modalIsOpen, closeModal, src, alt}) => {
     return (
         <>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} bodyOpenClassName={css["ReactModal__Body--open"]} overlayClassName={style} className={css.ReactModal__Content} contentLabel="Example Modal" afterOpen={css.ReactModal__Overlay}>
